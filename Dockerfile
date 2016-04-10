@@ -20,5 +20,6 @@ RUN useradd -ms /bin/bash -G dialout esp8266
 USER esp8266
 WORKDIR /home/esp8266
 
-RUN git clone https://github.com/pfalcon/esp-open-sdk.git --recursive 
-RUN cd esp-open-sdk && make STANDALONE=n
+RUN git clone https://github.com/pfalcon/esp-open-sdk.git --recursive
+WORKDIR /home/esp8266/esp-open-sdk
+RUN make 
