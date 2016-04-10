@@ -13,7 +13,7 @@ RUN echo 'deb http://security.debian.org/ jessie/updates non-free' >> /etc/apt/s
 RUN apt-get update
 RUN apt-get install -y make unrar autoconf automake libtool gcc g++ gperf flex bison texinfo gawk ncurses-dev libexpat-dev python python-serial sed git unzip bash wget bzip2 libtool-bin
 
-RUN useradd -ms /bin/bash esp8266
+RUN useradd -ms /bin/bash -G dialout esp8266
 
 USER esp8266
 WORKDIR /home/esp8266
