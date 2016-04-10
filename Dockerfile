@@ -22,5 +22,3 @@ WORKDIR /home/esp8266
 
 RUN git clone https://github.com/pfalcon/esp-open-sdk.git --recursive 
 RUN cd esp-open-sdk && make STANDALONE=n
-
-ENV PATH /home/esp8266/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
